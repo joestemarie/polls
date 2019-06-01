@@ -39,16 +39,32 @@ class Poll(models.Model):
     release_link = models.URLField()
 
     # define choices for the methodology
-    METHODOLOGY_TYPES = (
-        ("P", "Phone"),
-        ("O", "Online"),
-    )
+    METHODOLOGY_TYPES = [
+        ('Phone', (
+                ("LC", "Live Caller"),
+                ("IV", "IVR"),
+            )
+        ),
+        ("Online", (
+            ("WS", "Web Survey"),
+            )
+        )
+    ]
     methodology = models.CharField(
-        max_length=1,
+        max_length=2,
         choices=METHODOLOGY_TYPES,
     )
 
-    # define choices for the sample type
+    SAMPLE_METHODS = (
+        ("LS", "Listed"),
+        ("RD", "Random-digit Dialing"),
+        ("PL", "Panel")
+    )
+    sample_method = models.CharField(
+        max_length=2,
+        choices=SAMPLE_METHODS
+    )
+
     SAMPLE_TYPES = (
         ("RV", "Registered Voters"),
         ("LV", "Likely Voters"),
