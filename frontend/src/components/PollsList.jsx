@@ -30,7 +30,7 @@ class PollsList extends Component {
                 <div className="card-body">
                   <h5 className="card-title">{poll.pollster_name}</h5>
                   <h6 className="card-subtitle mb-2 text-muted">{poll.field_date_start} - {poll.field_date_end}</h6>
-                  <a href="#" className="card-link">Details</a>
+                  <a href={`/polls/${poll.id}`} className="card-link">Details</a>
                 </div>
               </div>
             </div>

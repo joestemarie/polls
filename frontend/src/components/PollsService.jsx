@@ -8,4 +8,9 @@ export default class PollsService {
     const url = `${API_URL}/api/polls/`;
     return axios.get(url).then(res => res.data);
   }
+
+  getPoll(pk) {
+    const url = `${API_URL}/api/polls/${pk}/`;
+    return axios.get(url).then(res => res.data);
+  }
 }

@@ -2,6 +2,7 @@ import  React, { Component } from  'react';
 import { BrowserRouter } from  'react-router-dom'
 import { Route, Link } from  'react-router-dom'
 import PollsList from "./components/PollsList.jsx"
+import PollView from "./components/PollView.jsx"
 import './App.css';
 
 const BaseLayout  = () => (
@@ -19,6 +20,7 @@ const BaseLayout  = () => (
     </nav>
     <div  className="content">
         <Route  path="/polls"  exact  component={PollsList}  />
+        <Route  path="/polls/:pk"  exact  component={PollView}  />
     </div>
 </div>
 )
