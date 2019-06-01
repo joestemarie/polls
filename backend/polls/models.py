@@ -18,6 +18,9 @@ class Question(models.Model):
     """
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
 
 
 class Pollster(models.Model):
@@ -131,6 +134,14 @@ class Poll(models.Model):
         max_length=2,
         choices=SAMPLE_TYPES
     )
+
+    def __str__(self):
+        return "{} - {} ({} - {})".format(
+            self.pollster.name,
+            self.geography,
+            self.field_date_start,
+            self.field_date_end
+        )
 
 
 
