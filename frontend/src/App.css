@@ -1,1 +1,41 @@
 @import  'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Work+Sans&display=swap');
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', sans-serif;
+}
+
+p {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.polls-list {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.polls-list > div > div > div.card {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+body {
+  background-color: #F2F2F1;
+}
+
+.poll-view.row{
+  max-width: 800px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.bg-orange {
+  background-color: #F56735;
+}

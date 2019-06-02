@@ -42,6 +42,7 @@ class Poll(models.Model):
     release_link = models.URLField()
 
     GEOGRAPHY_CHOICES = (
+        ("US", "National"),
         ("AL", "Alabama"),
         ("AK", "Alaska"),
         ("AZ", "Arizona"),
