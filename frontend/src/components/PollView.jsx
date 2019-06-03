@@ -42,7 +42,8 @@ class PollView extends Component {
       <div>
         <div className="row poll-view">
           <div className="col">
-            <h1>{this.state.poll.pollster_name}</h1>
+            <p>{this.state.poll.pollster_name}</p>
+            <p>{this.state.poll.geography}</p>
             <p>{this.state.poll.field_date_start} - {this.state.poll.field_date_end}</p>
             <p>{this.state.poll.n_size} {this.state.poll.sample}</p>
           </div>
@@ -56,7 +57,8 @@ class PollView extends Component {
 
             <Plot
               data={this.plotlyDataFormat(q.data_json)}
-              layout={{height: 400}}
+              layout={{autosize: true}}
+              style={{width: '100%', height: '100%'}}
             />
           </div>
         )}
